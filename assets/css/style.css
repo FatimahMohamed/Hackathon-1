@@ -1,0 +1,121 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* variables */
+:root {
+    --font: "IBM Plex Mono", sans-serif;
+    /* dark blue background */
+    --background-colour-1: #060018;
+    /* highlight blue */
+    --highlight-colour-1: #85c7f2;
+    /* highlight green */
+    --highlight-colour-2: #c3e8bd;
+    /* correct green */
+    --correct-green: #9cdd92;
+    /* incorrect red */
+    --incorrect-red: #ffa1a1;
+}
+
+/* general styles */
+
+body {
+    font-family: var(--font);
+    color: white;
+    background-color: var(--background-colour-1);
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.vertical-align-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-align-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to left, var(--highlight-colour-1), var(--highlight-colour-2));
+    color: transparent;
+    background-clip: text;
+}
+
+/* nav styling */
+
+/* header styling */
+
+.hero-title {
+    font-weight: 700;
+}
+
+#header {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* body styling */
+
+.question-title {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+#score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#score-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#correct-text, #correct-amount {
+    color: var(--correct-green);
+    font-weight: bold;
+}
+
+#incorrect-text, #incorrect-amount {
+    color: var(--incorrect-red);
+    font-weight: bold;
+}
+
+.tagline {
+    font-weight: bold;
+}
+
+.answer-choice {
+    padding: 100px;
+}
+
+.answer {
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 80px;
+}
+
+/* instructions modal */
+
+.modal-content {
+    background-color: var(--background-colour-1);
+}
+
+#settings-label {
+    font-weight: 700;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-text {
+    color: white;
+}
+
