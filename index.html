@@ -21,7 +21,7 @@
     <nav id="navbar" class="navbar navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><i class="fa-solid fa-globe"></i></a>
-            <button id="settings-button" class="btn d-flex btn-primary" type="button"><i
+            <button id="settings-button" class="btn d-flex btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#settings"><i
                     class="fa-solid fa-gears"></i></button>
         </div>
     </nav>
@@ -41,7 +41,8 @@
             <div class="row justify-content-center">
                 <!-- question box -->
                 <div id="question-box" class="col-12 col-lg-6 vertical-align-text">
-                    <h2 class="display-6 question-title text-center gradient-text">Question <span id="question-number">0</span></h2>
+                    <h2 class="display-6 question-title text-center gradient-text">Question <span
+                            id="question-number">0</span></h2>
                     <p class="text-center gradient-text"><span id="score">Score</span></p>
                     <!-- score box -->
                     <div id="score-box">
@@ -64,6 +65,26 @@
             </div>
         </div>
     </main>
+    <!-- instructions modal -->
+    <!-- this modal doesnt close when clicking outside, so the user is more likely to read the instructions -->
+    <div class="modal fade" id="settings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="settings-label" aria-hidden="true">
+        <div id="settings-label" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- footer -->
     <footer id="footer" class="mt-auto">
         <div class="container">
