@@ -1,0 +1,17 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* variables */
+:root {
+    --font: "IBM Plex Mono", sans-serif;
+    /* dark blue background */
+    --background-colour-1: #060018;
+    /* highlight blue */
+    --highlight-colour-1: #85c7f2;
+    /* highlight green */
+    --highlight-colour-2: #c3e8bd;
+    /* correct green */
+    --correct-green: #9cdd92;
+    /* incorrect red */
+    --incorrect-red: #ffa1a1;
+}
