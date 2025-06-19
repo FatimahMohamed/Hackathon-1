@@ -15,3 +15,34 @@
     /* incorrect red */
     --incorrect-red: #ffa1a1;
 }
+
+/* general styles */
+
+body {
+    font-family: var(--font);
+    color: white;
+    background-color: var(--background-colour-1);
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.vertical-align-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-align-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to left, var(--highlight-colour-1), var(--highlight-colour-2));
+    color: transparent;
+    background-clip: text;
+}
+
