@@ -23,5 +23,9 @@ const questions = [
 ];
 document.addEventListener("DOMContentLoaded", function() { 
     // this clicks the settings button on loading
-    document.getElementById("settings-button").click();
+    // document.getElementById("settings-button").click();
+
+    // Add event listener to start button
+    let startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", runQuiz);   
 });
