@@ -21,8 +21,8 @@
     <nav id="navbar" class="navbar navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><i class="fa-solid fa-globe"></i></a>
-            <button id="settings-button" class="btn d-flex btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#settings"><i
-                    class="fa-solid fa-gears"></i></button>
+            <button id="settings-button" class="btn d-flex btn-primary" type="button" data-bs-toggle="modal"
+                data-bs-target="#settings"><i class="fa-solid fa-gears"></i></button>
         </div>
     </nav>
     <!-- header -->
@@ -71,16 +71,29 @@
         aria-labelledby="settings-label" aria-hidden="true">
         <div id="settings-label" class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header horizontal-align-text">
+                    <h1 class="display-3 gradient-text" id="settings-label">Pick a Planet</h1><br>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <p class="modal-text text-center">The planet guessing quiz game!</p><br>
+                    <h2 id="rules-title" class="gradient-text text-center display-6">Rules</h2><br>
+                    <p id="rules-text" class="modal-text text-center">Read the question given, and choose the correct
+                        planet!</p><br>
+                    <h2 class="gradient-text text-center display-6">Choose a Difficulty</h2><br>
+                    <!-- radio buttons for difficulty -->
+                    <div class="btn-group horizontal-align-text" role="group" aria-label="Difficulty settings radio buttons">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="easy" autocomplete="off" checked>
+                        <label class="btn btn-outline-light" for="btnradio1">Easy</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="medium" autocomplete="off">
+                        <label class="btn btn-outline-light" for="btnradio2">Medium</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="hard" autocomplete="off">
+                        <label class="btn btn-outline-light" for="btnradio3">Hard</label>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button id="start-button" type="button" class="btn btn-light" data-bs-dismiss="modal">Begin!</button>
                 </div>
             </div>
         </div>

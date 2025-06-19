@@ -100,3 +100,22 @@ h1, h2 {
     border: 2px solid white;
     border-radius: 80px;
 }
+
+/* instructions modal */
+
+.modal-content {
+    background-color: var(--background-colour-1);
+}
+
+#settings-label {
+    font-weight: 700;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-text {
+    color: white;
+}
+
