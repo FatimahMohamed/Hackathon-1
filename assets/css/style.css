@@ -46,3 +46,57 @@ h1, h2 {
     background-clip: text;
 }
 
+/* nav styling */
+
+/* header styling */
+
+.hero-title {
+    font-weight: 700;
+}
+
+#header {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* body styling */
+
+.question-title {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+#score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#score-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#correct-text, #correct-amount {
+    color: var(--correct-green);
+    font-weight: bold;
+}
+
+#incorrect-text, #incorrect-amount {
+    color: var(--incorrect-red);
+    font-weight: bold;
+}
+
+.tagline {
+    font-weight: bold;
+}
+
+.answer-choice {
+    padding: 100px;
+}
+
+.answer {
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 80px;
+}
