@@ -46,6 +46,10 @@ h1, h2 {
     background-clip: text;
 }
 
+.hidden {
+    display: none;
+}
+
 /* nav styling */
 
 /* header styling */
