@@ -181,7 +181,7 @@ const crossText = '<i class="fa-solid fa-xmark feedback-mark-cross"></i>';
 document.addEventListener("DOMContentLoaded", function () {
 
     // click on settings menu
-    document.getElementById("settings-button").click();
+    // document.getElementById("settings-button").click();
 
     // add event listener to start button
     let startButton = document.getElementById("start-button");
@@ -199,7 +199,6 @@ function runQuiz() {
         // unhide the correct boxes
         document.getElementById("question-box").classList.remove("hidden");
         document.getElementById("answer-box").classList.remove("hidden");
-        document.getElementById("feedback-box").classList.remove("hidden");
         document.getElementById("initial-box").classList.add("hidden");
 
         // update the state of the quiz and set difficulty
@@ -252,7 +251,7 @@ function runQuiz() {
                     }
                     // update answer select to true and show next button
                     answerSelected = true;
-                    document.getElementById("next-question-button").classList.remove("hidden");
+                    document.getElementById("feedback-box").classList.remove("hidden");
                     // update the score
                     updateScore(correct, incorrect);
                 }
@@ -275,11 +274,11 @@ function runQuiz() {
                 // check if final question
                 if (questionIndex === amount - 1) {
                     // hide the button again
-                    nextQuestionButton.classList.add("hidden");
+                    document.getElementById("feedback-box").classList.add("hidden");
                     endQuiz(correct, incorrect);
                 } else {
                     // hide the button again
-                    nextQuestionButton.classList.add("hidden");
+                    document.getElementById("feedback-box").classList.add("hidden");
                     // update variables, hide next button, remove the feedback, and show the next question
                     questionIndex++;
                     answerSelected = false;
