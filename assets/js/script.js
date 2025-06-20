@@ -1,64 +1,172 @@
-// question list
-const questions = [
+// questions list
+const QUESTIONS = [
     {
-        question: "test question 1",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: false },
-            { answer: "answer 3", correct: true }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is located closest to the Sun?",
+        answers: ["Mercury", "Earth", "Saturn", "Neptune"],
+        correct: "Mercury",
+        difficulty: "easy"
     },
     {
-        question: "test question 2",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: true },
-            { answer: "answer 3", correct: false }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is located furthest away from the Sun?",
+        answers: ["Venus", "Mars", "Saturn", "Neptune"],
+        correct: "Neptune",
+        difficulty: "easy"
     },
     {
-        question: "test question 3",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: false },
-            { answer: "answer 3", correct: true }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is located closest to Earth?",
+        answers: ["Mercury", "Venus", "Mars", "Uranus"],
+        correct: "Mars",
+        difficulty: "easy"
     },
     {
-        question: "test question 4",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: true },
-            { answer: "answer 3", correct: false }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is located furthest from Earth?",
+        answers: ["Venus", "Mars", "Saturn", "Uranus"],
+        correct: "Uranus",
+        difficulty: "easy"
     },
     {
-        question: "test question 5",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: false },
-            { answer: "answer 3", correct: true }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is best known for its red colour?",
+        answers: ["Mars", "Earth", "Jupiter", "Uranus"],
+        correct: "Mars",
+        difficulty: "easy"
     },
     {
-        question: "test question 6",
-        answers: [
-            { answer: "answer 0", correct: false },
-            { answer: "answer 1", correct: false },
-            { answer: "answer 2", correct: true },
-            { answer: "answer 3", correct: false }
-        ],
-        difficulty: 0
+        text: "Which of the following planets is best known for its impressive rings?",
+        answers: ["Mercury", "Venus", "Saturn", "Neptune"],
+        correct: "Saturn",
+        difficulty: "easy"
+    },
+    {
+        text: "Which of the following planets is best known for spinning vertically?",
+        answers: ["Mars", "Earth", "Jupiter", "Uranus"],
+        correct: "Uranus",
+        difficulty: "easy"
+    },
+    {
+        text: "Which of the following planets is famous for its large, red spot??",
+        answers: ["Venus", "Earth", "Jupiter", "Saturn"],
+        correct: "Jupiter",
+        difficulty: "easy"
+    },
+    {
+        text: "Which of the following planets is the largest in the Solar System?",
+        answers: ["Earth", "Jupiter", "Uranus", "Neptune"],
+        correct: "Jupiter",
+        difficulty: "easy"
+    },
+    {
+        text: "Which of the following planets is the smallest in the Solar System?",
+        answers: ["Mercury", "Mars", "Saturn", "Uranus"],
+        correct: "Mercury",
+        difficulty: "easy"
+    },
+    {
+        text: "Which of the following planets does not have any rings?",
+        answers: ["Venus", "Jupiter", "Uranus", "Neptune"],
+        correct: "Venus",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets takes precisely one year to orbit the Sun?",
+        answers: ["Mercury", "Earth", "Saturn", "Neptune"],
+        correct: "Earth",
+        difficulty: "medium"
+    },
+    {
+        text: "On which of the following planets does a day last the longest?",
+        answers: ["Venus", "Mars", "Jupiter", "Uranus"],
+        correct: "Venus",
+        difficulty: "medium"
+    },
+    {
+        text: "On which of the following planets does a day last the shortest?",
+        answers: ["Earth", "Jupiter", "Saturn", "Uranus"],
+        correct: "Jupiter",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets has the most moons?",
+        answers: ["Mars", "Jupiter", "Saturn", "Neptune"],
+        correct: "Saturn",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets has the least moons?",
+        answers: ["Jupiter", "Saturn", "Uranus", "Neptune"],
+        correct: "Neptune",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets is the smallest?",
+        answers: ["Venus", "Earth", "Mars", "Neptune"],
+        correct: "Mars",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets is the largest?",
+        answers: ["Mars", "Saturn", "Uranus", "Neptune"],
+        correct: "Saturn",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets is the largest?",
+        answers: ["Venus", "Earth", "Uranus", "Neptune"],
+        correct: "Uranus",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planets has the highest surface temperature?",
+        answers: ["Mercury", "Venus", "Earth", "Mars"],
+        correct: "Venus",
+        difficulty: "medium"
+    },
+    {
+        text: "Which of the following planet's atmosphere contains the highest percentage of helium?",
+        answers: ["Earth", "Mars", "Jupiter", "Uranus"],
+        correct: "Uranus",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planet's atmosphere contains the highest percentage of hydrogen?",
+        answers: ["Mercury", "Saturn", "Uranus", "Neptune"],
+        correct: "Saturn",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the largest axial tilt?",
+        answers: ["Earth", "Jupiter", "Saturn", "Neptune"],
+        correct: "Neptune",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the smallest axial tilt?",
+        answers: ["Venus", "Earth", "Jupiter", "Saturn"],
+        correct: "Venus",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the largest orbital inclination with respect to the Sun?",
+        answers: ["Earth", "Mars", "Uranus", "Neptune"],
+        correct: "Earth",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the smallest orbital inclination with respect to the Sun?",
+        answers: ["Mercury", "Venus", "Mars", "Saturn"],
+        correct: "Mercury",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the smallest orbital inclination with respect to the ecliptic plane?",
+        answers: ["Earth", "Mars", "Jupiter", "Uranus"],
+        correct: "Earth",
+        difficulty: "hard"
+    },
+    {
+        text: "Which of the following planets has the largest orbital inclination with respect to the ecliptic plane?",
+        answers: ["Earth", "Mars", "Uranus", "Neptune"],
+        correct: "Mars",
+        difficulty: "hard"
     }
 ];
 
