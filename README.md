@@ -91,6 +91,7 @@ Tasks:
 Create and display a set of Physics questions from the National Curriculum.
 User Story:
 As a student, I would like a set of questions so that I can prepare for my exams.
+
 Acceptance Criteria:
 A set of Physics questions is available, including questions from the National Curriculum.
 Tasks:
@@ -106,7 +107,7 @@ The website passes the [WAVE](https://chromewebstore.google.com/detail/wave-eval
 
 ### Colours Used
 
-- Rich Black `#060018;`    
+- Rich Black `#060018`    
 - Baby Blue`#85c7f2`
 - Tea Green `#c3e8bd`
 - White `#ffffff`
@@ -143,9 +144,13 @@ This quiz has a running tally that is only visible at the end of the quiz
 # Deployment and Tools
 
 ## Deployment
- We used github for deployment
 
- -------
+
+ n this section, the tested and validated product will be deployed We used github for deployment.
+
+ 
+
+
 
 
 ## Tools
@@ -173,21 +178,22 @@ The pictures are provided below.----
 
 # AI Usage and Implementation
 
---------
-
 AI was not used in this project for the reasons stated below.
 
 ## AI Code Generation
------
+
+AI was not used in code generation.
 
 ## AI Debugging
--------
+
+AI was not used in debugging
 
 ## AI Optimisation
--------
-## Reflection on AI Usage
 
-----------
+
+## Reflection on AI Usage
+Not using AI in this project was a great experience
+
 
 # References and Credits
 
