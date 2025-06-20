@@ -200,7 +200,14 @@ function runQuiz() {
  * shuffles given array
  */
 function shuffle(array) {
-
+    const copy = array.slice();
+    let result = [];
+    while (copy.length > 0) {
+        const randomIndex = Math.floor(Math.random() * copy.length)
+        result.push(copy[randomIndex]);
+        copy.splice(randomIndex, 1);
+    }
+    return result;
 }
 
 /**
@@ -227,7 +234,7 @@ function setQuestion(questions, questionIndex) {
 /**
  * update the score on the page
  */
-function updateScore(correct, incorrect){
+function updateScore(correct, incorrect) {
 
 }
 
@@ -242,5 +249,5 @@ function endQuiz(correct, incorrect) {
  * set the background colour of each planet
  */
 function setBgColour(questions, questionIndex) {
-    
+
 }
