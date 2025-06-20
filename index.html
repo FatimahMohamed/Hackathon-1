@@ -21,14 +21,14 @@
     <nav id="navbar" class="navbar navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><i class="fa-solid fa-globe"></i></a>
-            <button id="settings-button" class="btn d-flex btn-primary" type="button" data-bs-toggle="modal"
+            <button id="settings-button" class="btn d-flex btn-light" type="button" data-bs-toggle="modal"
                 data-bs-target="#settings"><i class="fa-solid fa-gears"></i></button>
         </div>
     </nav>
     <!-- header -->
     <header id="header" class="container hero">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 text-center">
+            <div class="col-12 text-center">
                 <h1 class="display-3 hero-title gradient-text">Pick a Planet</h1>
                 <p class="hero-text">The planet guessing quiz game!</p>
             </div>
@@ -40,7 +40,7 @@
         <div id="question-area" class="container">
             <div class="row justify-content-center">
                 <!-- question box -->
-                <div id="question-box" class="col-12 col-lg-6 vertical-align-text">
+                <div id="question-box" class="col-12 col-lg-6 vertical-align-text hidden">
                     <h2 class="display-6 question-title text-center gradient-text">Question <span
                             id="question-number">0</span></h2>
                     <p class="text-center gradient-text"><span id="score">Score</span></p>
@@ -49,17 +49,39 @@
                         <p><span id="correct-text">Correct: </span><span id="correct-amount">0</span></p>
                         <p><span id="incorrect-text">Incorrect: </span><span id="incorrect-amount">0</span></p>
                     </div>
-                    <p id="question-text" class="question-text">Please click the settings button in the top right corner
-                        and choose a difficulty to begin!</p>
+                    <p id="question-text" class="question-text"></p>
                     <p class="tagline text-center gradient-text">Now, Pick a Planet!</p>
                 </div>
                 <!-- answer box -->
-                <div id="answer-box" class="col-12 col-lg-6 vertical-align-text">
-                    <div class="row justify-content-center text-center">
-                        <div id="answer-0" class="col-6 answer-choice"><span class="answer">a0</span></div>
-                        <div id="answer-1" class="col-6 answer-choice"><span class="answer">a1</span></div>
-                        <div id="answer-2" class="col-6 answer-choice"><span class="answer">a2</span></div>
-                        <div id="answer-3" class="col-6 answer-choice"><span class="answer">a3</span></div>
+                <div id="answer-box" class="col-12 col-lg-6 vertical-align-text hidden">
+                    <div class="row justify-content-evenly text-center">
+                        <div id="answer-0" class="col-12 col-md-6 answer-choice"><span class="answer">a0</span></div>
+                        <div id="answer-1" class="col-12 col-md-6 answer-choice"><span class="answer">a1</span></div>
+                        <div id="answer-2" class="col-12 col-md-6 answer-choice"><span class="answer">a2</span></div>
+                        <div id="answer-3" class="col-12 col-md-6 answer-choice"><span class="answer">a3</span></div>
+                    </div>
+                </div>
+                <!-- feedback box -->
+                <div id="feedback-box" class="col-12 justify-content-center text-center">
+                    <p id="feedback"></p>
+                    <button id="next-question-button" class="btn btn-light hidden" type="button">Next</button>  
+                </div>
+                <!-- initial load box -->
+                <div id="initial-box" class="col-12">
+                    <p id="initial-text">Please click the settings button in the top right corner
+                        and choose a difficulty to begin!</p>
+                </div>
+                <!-- final result box -->
+                <div id="final-result-box" class="col-12 hidden">
+                    <h2 id="final-result-title" class="gradient-text text-center display-4">Final Score</h2>
+                    <!-- final score box -->
+                    <div id="score-box" class="horizontal-align-text">
+                        <p><span id="final-correct">Correct:</span> <span id="final-correct-amount">0</span></p>
+                        <p><span id="final-incorrect">Incorrect:</span> <span id="final-incorrect-amount">0</span></p>
+                    </div>
+                    <!-- button box -->
+                    <div id="retry-button-box">
+                        <button id="retry-button" type="button" class="btn btn-light">Play Again?</button>
                     </div>
                 </div>
             </div>
@@ -82,13 +104,13 @@
                     <h2 class="gradient-text text-center display-6">Choose a Difficulty</h2><br>
                     <!-- radio buttons for difficulty -->
                     <div class="btn-group horizontal-align-text" role="group" aria-label="Difficulty settings radio buttons">
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="easy" autocomplete="off" checked>
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio1" value="easy" autocomplete="off" checked>
                         <label class="btn btn-outline-light" for="btnradio1">Easy</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="medium" autocomplete="off">
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio2" value="medium" autocomplete="off">
                         <label class="btn btn-outline-light" for="btnradio2">Medium</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="hard" autocomplete="off">
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio3" value="hard" autocomplete="off">
                         <label class="btn btn-outline-light" for="btnradio3">Hard</label>
                     </div>
                 </div>
