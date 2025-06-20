@@ -160,6 +160,12 @@ h1, h2 {
     font-weight: bold;
 }
 
+#final-score-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #retry-button-box {
     padding-top: 20px;
     display: flex;
@@ -201,7 +207,7 @@ h1, h2 {
     background-color: var(--background-colour-1);
 }
 
-#settings-label {
+#settings-title {
     font-weight: 700;
 }
 

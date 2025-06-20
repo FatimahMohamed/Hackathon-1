@@ -266,9 +266,31 @@ function runQuiz() {
         setQuestion(questionSet, questionIndex);
         setBgColour(questionSet, questionIndex);
 
+        // add the event listener to the next button so that the next question can be set, or the quiz ended if it is the final question.
+        // also, we only want this button to be clickable if the question has been answered.
+        let nextQuestionButton = document.getElementById("next-question-button");
+        nextQuestionButton.addEventListener("click", function () {
+            // check if answer has been selected, and if the quiz is not over (should stop people from messing with the HTML)
+            if (answerSelected && quizFinished === false) {
+                // check if final question
+                if (questionIndex === amount - 1) {
+                    // hide the button again
+                    nextQuestionButton.classList.add("hidden");
+                    endQuiz(correct, incorrect);
+                } else {
+                    // hide the button again
+                    nextQuestionButton.classList.add("hidden");
+                    // update variables, hide next button, remove the feedback, and show the next question
+                    questionIndex++;
+                    answerSelected = false;
+                    document.getElementById("feedback").innerText = "";
+                    setQuestion(questionSet, questionIndex);
+                    setBgColour(questionSet, questionIndex);
+
+                }
+            }
+        });
     }
-
-
 }
 /**
  * shuffles given array
@@ -316,7 +338,7 @@ function getQuestions(questions, difficulty = "easy", amount = 8) {
  * checks the answer chosen
  */
 function checkAnswer(answer, questions, questionIndex) {
-    
+
     if (answer === questions[questionIndex].correct) {
         return true;
     } else {
@@ -328,7 +350,7 @@ function checkAnswer(answer, questions, questionIndex) {
  * set question on the page
  */
 function setQuestion(questions, questionIndex) {
-    
+
     // set the question number
     document.getElementById("question-number").innerText = questionIndex + 1;
 
@@ -354,7 +376,7 @@ function setQuestion(questions, questionIndex) {
  * update the score on the page
  */
 function updateScore(correct, incorrect) {
-    
+
     // set the correct text
     document.getElementById("correct-amount").innerText = correct;
 
@@ -367,13 +389,39 @@ function updateScore(correct, incorrect) {
  */
 function endQuiz(correct, incorrect) {
 
+    // end the quiz
+    quizFinished = true;
+
+    // hide the boxes
+    document.getElementById("question-box").classList.add("hidden");
+    document.getElementById("answer-box").classList.add("hidden");
+    document.getElementById("feedback-box").classList.add("hidden");
+
+    // unhide the final score box
+    document.getElementById("final-result-box").classList.remove("hidden");
+
+    // set the scores
+    document.getElementById("final-correct-amount").innerText = correct;
+    document.getElementById("final-incorrect-amount").innerText = incorrect;
+
+    // add the event listener to the retry button. only allow it to activate if the quiz is finished
+    const retryButton = document.getElementById("retry-button");
+    retryButton.addEventListener("click", function () {
+        // only activate if the quiz is finished
+        if (quizFinished) {
+
+            // reload the page to reset the quiz
+            location.reload();
+
+        }
+    });
 }
 
 /**
  * set the background colour of each planet
  */
 function setBgColour(questions, questionIndex) {
-    
+
     // list of the classes
     const coloursList = ["Mercury", "Venus", "Mars", "Earth", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
