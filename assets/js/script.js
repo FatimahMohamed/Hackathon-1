@@ -227,7 +227,17 @@ function runQuiz() {
         let incorrect = 0;
         let amount = 8;
         let answerSelected = false;
+
+        // get question set
+        let questionSet = getQuestions(QUESTIONS, difficulty, amount);
+
+        // set the first question
+        setQuestion(questionSet, questionIndex);
+        setBgColour(questionSet, questionIndex);
+        
     }
+
+
 }
 /**
  * shuffles given array
@@ -248,6 +258,27 @@ function shuffle(array) {
  */
 function getQuestions(questions, difficulty = "easy", amount = 8) {
 
+    // variable to temporarily store all the questions of the chosen difficulty
+    let tempArr = [];
+
+    // add the questions to the temporary array
+    for (let question of questions) {
+        if (question.difficulty === difficulty) {
+            tempArr.push(question);
+        }
+    }
+
+    // shuffle the questions
+    tempArr = shuffle(tempArr);
+
+    // shuffle the answer order for each question
+    for (let i = 0; i < tempArr.length; i++) {
+        tempArr[i].answers = shuffle(tempArr[i].answers);
+    }
+
+    // return the amount of questions requested
+    return tempArr.splice(0, amount);
+
 }
 
 /**
@@ -261,7 +292,26 @@ function checkAnswer(answer, questions, questionIndex) {
  * set question on the page
  */
 function setQuestion(questions, questionIndex) {
+    
+    // set the question number
+    document.getElementById("question-number").innerText = questionIndex + 1;
 
+    // set the question text
+    document.getElementById("question-text").innerText = questions[questionIndex].text;
+
+    // get the answer boxes
+    const answerBoxes = document.getElementsByClassName("answer");
+
+    // for each answer box, set the answer and the data attribute of the parent for checking. also need a variable to store each answer
+    let answerIndex = 0;
+    for (let answerBox of answerBoxes) {
+        // set the answer text
+        answerBox.innerText = questions[questionIndex].answers[answerIndex];
+        // set the data attribute
+        answerBox.parentElement.setAttribute("data-answer", questions[questionIndex].answers[answerIndex]);
+        // increment
+        answerIndex++;
+    }
 }
 
 /**
@@ -282,5 +332,22 @@ function endQuiz(correct, incorrect) {
  * set the background colour of each planet
  */
 function setBgColour(questions, questionIndex) {
+    
+    // list of the classes
+    const coloursList = ["Mercury", "Venus", "Mars", "Earth", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
+    // set an index for adding the class
+    let classIndex = 0;
+
+    // loop through all the buttons
+    const answerButtons = document.getElementsByClassName("answer");
+    for (let answerButton of answerButtons) {
+        // remove each class from the list
+        for (let colour of coloursList) {
+            answerButton.classList.remove(`${colour}`);
+        }
+        // add the correct class
+        answerButton.classList.add(`${questions[questionIndex].answers[classIndex]}`);
+        classIndex++;
+    }
 }
