@@ -228,13 +228,44 @@ function runQuiz() {
         let amount = 8;
         let answerSelected = false;
 
+        // add event listeners to answer buttons
+        const answerButtons = document.getElementsByClassName("answer-choice");
+        for (let answerButton of answerButtons) {
+            // add the event listener
+            answerButton.addEventListener("click", function () {
+                // only give feedback if an answer has not yet been clicked
+                if (!answerSelected) {
+                    // remove styling from feedback text
+                    document.getElementById("feedback").classList.value = "";
+                    // check if the answer is correct
+                    if (checkAnswer(this.getAttribute("data-answer"), questionSet, questionIndex)) {
+                        // update variables
+                        document.getElementById("feedback").innerText = "Correct!";
+                        document.getElementById("feedback").classList.add("feedback-correct");
+                        this.children[0].innerHTML = tickText;
+                        correct++;
+                    } else {
+                        document.getElementById("feedback").innerText = "Incorrect.";
+                        document.getElementById("feedback").classList.add("feedback-incorrect");
+                        this.children[0].innerHTML = crossText;
+                        incorrect++;
+                    }
+                    // update answer select to true and show next button
+                    answerSelected = true;
+                    document.getElementById("next-question-button").classList.remove("hidden");
+                    // update the score
+                    updateScore(correct, incorrect);
+                }
+            });
+        }
+
         // get question set
         let questionSet = getQuestions(QUESTIONS, difficulty, amount);
 
         // set the first question
         setQuestion(questionSet, questionIndex);
         setBgColour(questionSet, questionIndex);
-        
+
     }
 
 
@@ -285,7 +316,12 @@ function getQuestions(questions, difficulty = "easy", amount = 8) {
  * checks the answer chosen
  */
 function checkAnswer(answer, questions, questionIndex) {
-
+    
+    if (answer === questions[questionIndex].correct) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -318,7 +354,12 @@ function setQuestion(questions, questionIndex) {
  * update the score on the page
  */
 function updateScore(correct, incorrect) {
+    
+    // set the correct text
+    document.getElementById("correct-amount").innerText = correct;
 
+    // set the incorrect text
+    document.getElementById("incorrect-amount").innerText = incorrect;
 }
 
 /**
