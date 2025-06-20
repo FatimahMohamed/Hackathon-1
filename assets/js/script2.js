@@ -1,4 +1,4 @@
-// questions list
+// list of questions
 const QUESTIONS = [
     {
         text: "Which of the following planets is located closest to the Sun?",
@@ -190,9 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * initialise quiz
+ * function that runs the quiz
  */
 function runQuiz() {
+
     // first, check if the quiz is running. only start the quiz if not
     if (quizRunning === false) {
 
@@ -290,8 +291,11 @@ function runQuiz() {
                 }
             }
         });
+
     }
+
 }
+
 /**
  * shuffles given array
  */
@@ -304,10 +308,10 @@ function shuffle(array) {
         copy.splice(randomIndex, 1);
     }
     return result;
-}
+};
 
 /**
- * gets the questions from the question list
+ * gets the questions
  */
 function getQuestions(questions, difficulty = "easy", amount = 8) {
 
@@ -331,11 +335,10 @@ function getQuestions(questions, difficulty = "easy", amount = 8) {
 
     // return the amount of questions requested
     return tempArr.splice(0, amount);
-
 }
 
-/**
- * checks the answer chosen
+/** 
+ * check the answer of the button clicked
  */
 function checkAnswer(answer, questions, questionIndex) {
 
@@ -344,10 +347,11 @@ function checkAnswer(answer, questions, questionIndex) {
     } else {
         return false;
     }
+
 }
 
 /**
- * set question on the page
+ * set the question on the page
  */
 function setQuestion(questions, questionIndex) {
 
@@ -373,7 +377,7 @@ function setQuestion(questions, questionIndex) {
 }
 
 /**
- * update the score on the page
+ * update the score
  */
 function updateScore(correct, incorrect) {
 
@@ -382,10 +386,10 @@ function updateScore(correct, incorrect) {
 
     // set the incorrect text
     document.getElementById("incorrect-amount").innerText = incorrect;
-}
 
+}
 /**
- * end the quiz once all questions answered
+ * end the quiz
  */
 function endQuiz(correct, incorrect) {
 
@@ -409,7 +413,7 @@ function endQuiz(correct, incorrect) {
     retryButton.addEventListener("click", function () {
         // only activate if the quiz is finished
         if (quizFinished) {
-
+            
             // reload the page to reset the quiz
             location.reload();
 
@@ -418,7 +422,7 @@ function endQuiz(correct, incorrect) {
 }
 
 /**
- * set the background colour of each planet
+ * set the background colour for each planet when chosen
  */
 function setBgColour(questions, questionIndex) {
 
