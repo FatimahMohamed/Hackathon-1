@@ -189,3 +189,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/**
+ * initialise quiz
+ */
+function runQuiz() {
+
+}
+
+/**
+ * shuffles given array
+ */
+function shuffle(array) {
+
+}
+
+/**
+ * gets the questions from the question list
+ */
+function getQuestions(questions, difficulty = "easy", amount = 8) {
+
+}
+
+/**
+ * checks the answer chosen
+ */
+function checkAnswer(answer, questions, questionIndex) {
+
+}
+
+/**
+ * set question on the page
+ */
+function setQuestion(questions, questionIndex) {
+
+}
+
+/**
+ * update the score on the page
+ */
+function updateScore(correct, incorrect){
+
+}
+
+/**
+ * end the quiz once all questions answered
+ */
+function endQuiz(correct, incorrect) {
+
+}
+
+/**
+ * set the background colour of each planet
+ */
+function setBgColour(questions, questionIndex) {
+    
+}
