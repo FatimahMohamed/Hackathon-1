@@ -193,9 +193,42 @@ document.addEventListener("DOMContentLoaded", function () {
  * initialise quiz
  */
 function runQuiz() {
+    // first, check if the quiz is running. only start the quiz if not
+    if (quizRunning === false) {
 
+        // unhide the correct boxes
+        document.getElementById("question-box").classList.remove("hidden");
+        document.getElementById("answer-box").classList.remove("hidden");
+        document.getElementById("feedback-box").classList.remove("hidden");
+        document.getElementById("initial-box").classList.add("hidden");
+
+        // update the state of the quiz and set difficulty
+        quizRunning = true;
+        let difficulty = "easy";
+
+        // disable the radio buttons, get the difficulty chosen, and update the text of the close button in the modal
+        let radioButtons = document.getElementsByClassName("difficulty-button");
+        for (let radioButton of radioButtons) {
+            // disable the button
+            radioButton.disabled = true;
+            // set the difficulty if checked
+            if (radioButton.checked) {
+                difficulty = radioButton.value;
+            }
+
+        }
+
+        // update button text to better show what it does
+        document.getElementById("start-button").innerText = "Close";
+
+        // set variables
+        let questionIndex = 0;
+        let correct = 0;
+        let incorrect = 0;
+        let amount = 8;
+        let answerSelected = false;
+    }
 }
-
 /**
  * shuffles given array
  */
