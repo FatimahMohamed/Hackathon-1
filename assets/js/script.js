@@ -181,7 +181,7 @@ const crossText = '<i class="fa-solid fa-xmark feedback-mark-cross"></i>';
 document.addEventListener("DOMContentLoaded", function () {
 
     // click on settings menu
-    document.getElementById("settings-button").click();
+    // document.getElementById("settings-button").click();
 
     // add event listener to start button
     let startButton = document.getElementById("start-button");
@@ -299,7 +299,7 @@ function shuffle(array) {
     const copy = array.slice();
     let result = [];
     while (copy.length > 0) {
-        const randomIndex = Math.floor(Math.random() * copy.length)
+        const randomIndex = Math.floor(Math.random() * copy.length);
         result.push(copy[randomIndex]);
         copy.splice(randomIndex, 1);
     }
