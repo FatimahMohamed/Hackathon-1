@@ -1,6 +1,5 @@
 # Pick A Planet
-![Perfect Planet - Project Banner](/readme/project-banner.webp)
-
+  
 #
 
 ## Introduction
