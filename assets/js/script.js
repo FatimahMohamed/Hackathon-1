@@ -443,7 +443,7 @@ function setBgColour(questions, questionIndex) {
     }
 }
 
-// Progress bar functionality  
+// Functionality for the progress bar 
  document.getElementById('next-question-button').addEventListener('click', function() {
       increaseProgress();
     });
