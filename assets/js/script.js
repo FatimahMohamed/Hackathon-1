@@ -353,6 +353,9 @@ function setQuestion(questions, questionIndex) {
     // set the question number
     document.getElementById("question-number").innerText = questionIndex + 1;
 
+    // set the progress number
+    document.getElementById("progress-number").innerText = questionIndex + 1;
+    
     // set the question text
     document.getElementById("question-text").innerText = questions[questionIndex].text;
 
@@ -439,3 +442,20 @@ function setBgColour(questions, questionIndex) {
         classIndex++;
     }
 }
+
+// Functionality for the progress bar 
+ document.getElementById('next-question-button').addEventListener('click', function() {
+      increaseProgress();
+    });
+ 
+ let progress = 0;
+
+    function increaseProgress() {
+      if (progress < 100) {
+        progress += 12.5;
+        document.getElementById('progress-bar').style.width = progress + '%';
+      }
+    }
+
+
+
