@@ -153,6 +153,31 @@ h2 {
     padding: 50px;
 }
 
+#progress-container {
+      width: 40%;
+      background-color: var(--tick-colour);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      justify-content: center;
+      display:block;
+      margin-left: auto;
+      margin-right:auto
+    }
+
+#progress-bar {
+      width: 0%;
+      height: 20px;
+      background-color: var(--highlight-colour-1);
+      transition: width 0.3s ease;
+    }
+
+#progress-text {
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+}
+
 .question-title {
     font-weight: 700;
     padding-bottom: 20px;
