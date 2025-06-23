@@ -100,11 +100,10 @@ h2 {
     font-weight: bold;
 }
 
-
 .glow:hover {
     z-index: -100;
     background-color: inherit;
-    box-shadow: 0 0 10px 10px lightblue, 0 0 20px 10px lightgreen;
+    box-shadow: 0 0 10px 10px var(--highlight-colour-1);
     transition: all ease-in-out 0.5s;
 }
 
@@ -257,6 +256,22 @@ h2 {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+}
+
+.correct-glow {
+    border: none;
+    z-index: -50;
+    background-color: inherit;
+    box-shadow: 0 0 10px 10px white, 0 0 20px 20px var(--correct-green);
+    transition: all ease-in-out 0.5s;
+}
+
+.incorrect-glow {
+    border: none;
+    z-index: -50;
+    background-color: inherit;
+    box-shadow: 0 0 10px 10px white, 0 0 20px 20px var(--incorrect-red);
+    transition: all ease-in-out 0.5s;
 }
 
 #initial-text {

@@ -242,18 +242,22 @@ function runQuiz() {
                         document.getElementById("feedback").innerText = "Correct!";
                         document.getElementById("feedback").classList.add("feedback-correct");
                         this.children[0].innerHTML = tickText;
+                        this.children[0].classList.add("correct-glow");
+                        this.children[0].classList.remove("glow");
                         correct++;
                     } else {
                         document.getElementById("feedback").innerText = "Incorrect.";
                         document.getElementById("feedback").classList.add("feedback-incorrect");
                         this.children[0].innerHTML = crossText;
+                        this.children[0].classList.add("incorrect-glow");
+                        this.children[0].classList.remove("glow");
                         incorrect++;
                     }
                     // update answer select to true and show next button
                     answerSelected = true;
                     document.getElementById("feedback-box").classList.remove("hidden");
                     // update the score
-                    updateScore(correct, incorrect);
+                    updateScore(correct, incorrect);                    
                 }
             });
         }
@@ -366,6 +370,11 @@ function setQuestion(questions, questionIndex) {
         answerBox.innerText = questions[questionIndex].answers[answerIndex];
         // set the data attribute
         answerBox.parentElement.setAttribute("data-answer", questions[questionIndex].answers[answerIndex]);
+        // remove the incorrect or correct glow
+        answerBox.classList.remove("correct-glow");
+        answerBox.classList.remove("incorrect-glow");
+        // re-add the glow
+        answerBox.classList.add("glow");
         // increment
         answerIndex++;
     }
@@ -440,6 +449,9 @@ function setBgColour(questions, questionIndex) {
     }
 }
 
+/**
+ *
+ */
 // Functionality for the progress bar 
 document.getElementById('next-question-button').addEventListener('click', function () {
     increaseProgress();
@@ -456,6 +468,3 @@ function increaseProgress() {
         document.getElementById('progress-bar').style.width = progress + '%';
     }
 }
-
-
-
