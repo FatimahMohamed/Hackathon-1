@@ -192,26 +192,6 @@ The pictures are provided below.
 ![Javascript Checker](docs/javascript%20checker.png)
 
 
-# AI Usage and Implementation
-
-AI was not used in this project for the reasons stated below.
-
-## AI Code Generation
-
-AI was not used in code generation.
-
-## AI Debugging
-
-AI was not used in debugging
-
-## AI Optimisation
-
-
-## Reflection on AI Usage
-
-Not using AI in this project was a great experience. 
-
-
 # References and Credits
 
 - Project brief and learning materials by [Code Institute](https://codeinstitute.net/)
