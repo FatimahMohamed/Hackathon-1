@@ -439,3 +439,23 @@ function setBgColour(questions, questionIndex) {
         classIndex++;
     }
 }
+
+// Functionality for the progress bar 
+document.getElementById('next-question-button').addEventListener('click', function () {
+    increaseProgress();
+});
+
+let progress = 12.5;
+
+/**
+ * increase the length of the progress bar
+ */
+function increaseProgress() {
+    if (progress < 100) {
+        progress += 12.5;
+        document.getElementById('progress-bar').style.width = progress + '%';
+    }
+}
+
+
+

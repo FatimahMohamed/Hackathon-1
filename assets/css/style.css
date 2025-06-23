@@ -110,30 +110,28 @@ h2 {
 
 /* these add an animated border to the question area, and change it's colour to highlight it a bit */
 .border-anim {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  border: 3px solid #0000;
-  border-radius: 12px;
-  background: linear-gradient(var(--question-area-colour), var(--question-area-colour)) padding-box, linear-gradient(
-        var(--angle),
-        var(--question-area-colour),
-        var(--highlight-colour-1)
-      ) border-box;
-  animation: 20s rotate linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 3px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(var(--question-area-colour), var(--question-area-colour)) padding-box, linear-gradient(var(--angle),
+            var(--question-area-colour),
+            var(--highlight-colour-1)) border-box;
+    animation: 20s rotate linear infinite;
 }
 
 @keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
+    to {
+        --angle: 360deg;
+    }
 }
 
 @property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 /* header styling */
@@ -151,6 +149,31 @@ h2 {
 
 #question-area {
     padding: 50px;
+}
+
+#progress-container {
+    width: 40%;
+    background-color: var(--tick-colour);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#progress-bar {
+    width: 12.5%;
+    height: 20px;
+    background-color: var(--highlight-colour-1);
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    text-align: center;
+    color: white;
+    padding: 5px 0;
 }
 
 .question-title {
