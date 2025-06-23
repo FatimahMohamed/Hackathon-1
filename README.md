@@ -6,7 +6,7 @@
 Pick a Planet is our first portfolio project, developed following the Code Institute Full Stack Development Bootcamp using HTML, CSS, Bootstrap and Jarvascript. It was developed following a set of guidelines,we had a choice of Quiz, Game or API catergories. 
 
 ## Project Outline
-Pick a Planet was developed as a physics based quiz, to impart knowlege about the planets. General advice is given, a list of resources which should encompass people of all ages, and a form allowing the user to contact the website creators for questions. 
+Pick a Planet was developed as a physics based quiz, to impart knowlege about the planets. Questions of various are included to cater for all levels of knowledge. Users can view their correct and incorrects answers while progressing through the quiz.
 
 The website follows modern accessibility standards, and is responsive to devices of all screen sizes.
 
