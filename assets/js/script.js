@@ -181,7 +181,7 @@ const crossText = '<i class="fa-solid fa-xmark feedback-mark-cross"></i>';
 document.addEventListener("DOMContentLoaded", function () {
 
     // click on settings menu
-    // document.getElementById("settings-button").click();
+    document.getElementById("settings-button").click();
 
     // add event listener to start button
     let startButton = document.getElementById("start-button");
