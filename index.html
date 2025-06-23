@@ -18,8 +18,9 @@
     <!-- navbar -->
     <nav id="navbar" class="navbar navbar-dark">
         <div class="container-fluid justify-content-end ">
-            <button id="settings-button" value="settings" aria-label="Click to open the settings menu" class="btn d-flex btn-light" type="button" data-bs-toggle="modal"
-                data-bs-target="#settings"><i class="fa-solid fa-gears"></i></button>
+            <button id="settings-button" value="settings" aria-label="Click to open the settings menu"
+                class="btn d-flex btn-light" type="button" data-bs-toggle="modal" data-bs-target="#settings"><i
+                    class="fa-solid fa-gears"></i></button>
         </div>
     </nav>
     <!-- header -->
@@ -38,12 +39,11 @@
             <div class="row justify-content-center">
                 <!-- question box -->
                 <div id="question-box" class="col-12 col-lg-6 vertical-align-text hidden">
-                          <div id="progress-text">Question <span id="progress-number">1</span> of 8</div>
+                    <h2 class="display-6 question-title text-center gradient-text">Question <span
+                            id="question-number">0</span> of 8</span></h2>
                     <div id="progress-container">
                         <div id="progress-bar"></div>
                     </div>
-                    <h2 class="display-6 question-title text-center gradient-text">Question <span
-                            id="question-number">0</span></h2>
                     <p class="text-center gradient-text"><span id="score">Score</span></p>
                     <!-- score box -->
                     <div id="score-box">
@@ -56,10 +56,14 @@
                 <!-- answer box -->
                 <div id="answer-box" class="col-12 col-lg-6 vertical-align-text hidden">
                     <div class="row justify-content-evenly text-center">
-                        <div id="answer-0" class="col-12 col-md-6 answer-choice"><span class="answer glow">a0</span></div>
-                        <div id="answer-1" class="col-12 col-md-6 answer-choice"><span class="answer glow">a1</span></div>
-                        <div id="answer-2" class="col-12 col-md-6 answer-choice"><span class="answer glow">a2</span></div>
-                        <div id="answer-3" class="col-12 col-md-6 answer-choice"><span class="answer glow">a3</span></div>
+                        <div id="answer-0" class="col-12 col-md-6 answer-choice"><span class="answer glow">a0</span>
+                        </div>
+                        <div id="answer-1" class="col-12 col-md-6 answer-choice"><span class="answer glow">a1</span>
+                        </div>
+                        <div id="answer-2" class="col-12 col-md-6 answer-choice"><span class="answer glow">a2</span>
+                        </div>
+                        <div id="answer-3" class="col-12 col-md-6 answer-choice"><span class="answer glow">a3</span>
+                        </div>
                     </div>
                 </div>
                 <!-- feedback box -->
@@ -104,19 +108,24 @@
                         planet!</p><br>
                     <h2 class="gradient-text text-center display-6">Choose a Difficulty</h2><br>
                     <!-- radio buttons for difficulty -->
-                    <div class="btn-group horizontal-align-text" role="group" aria-label="Difficulty settings radio buttons">
-                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio1" value="easy" checked>
+                    <div class="btn-group horizontal-align-text" role="group"
+                        aria-label="Difficulty settings radio buttons">
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio1"
+                            value="easy" checked>
                         <label class="btn btn-outline-light" for="btnradio1">Easy</label>
 
-                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio2" value="medium">
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio2"
+                            value="medium">
                         <label class="btn btn-outline-light" for="btnradio2">Medium</label>
 
-                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio3" value="hard">
+                        <input type="radio" class="btn-check difficulty-button" name="btnradio" id="btnradio3"
+                            value="hard">
                         <label class="btn btn-outline-light" for="btnradio3">Hard</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="start-button" type="button" class="btn btn-light" data-bs-dismiss="modal">Begin!</button>
+                    <button id="start-button" type="button" class="btn btn-light"
+                        data-bs-dismiss="modal">Begin!</button>
                 </div>
             </div>
         </div>
